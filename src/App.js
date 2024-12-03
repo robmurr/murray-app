@@ -4,10 +4,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className='fart'>
+      <div className='freakbob'>
         <img 
-          className='image' 
-          src='./public/image/freakbob1.jpg'
+          className='freakbob-image' 
+          src='/image/freakbob1.jpg'
            alt='FreakBob'
           />
       </div>
