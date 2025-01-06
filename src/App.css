@@ -1,6 +1,236 @@
+/* Import Raleway font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-.freakbob-image {
-  position: absolute;
-  width: 600px;
-  height: 600px;
+
+/* Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Header/Nav Bar */
+.header {
+  background-color: rgba(0, 0, 128, 1.23);
+  top: 0;
+  width: 100%;
+  color: white;
+  padding: 1rem 2rem;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+}
+
+.header.sticky {
+  background-color: rgba(0, 0, 128, 0.7);
+}
+
+.logo {
+  display: flex;           /* Arrange children (img and h2) in a row */
+  align-items: center;     /* Vertically center items in the row */
+  gap: 10px;               /* Add space between the image and the text */
+  margin-left: -2vw;
+}
+
+.nav-logo {
+  height: 40px;            /* Adjust the image size as needed */
+  width: auto;             /* Maintain the aspect ratio */
+}
+
+h2 {
+  font-size: 24px;         /* Adjust text size as needed */
+  margin: 0;               /* Remove default margin */
+}
+
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: rgb(69, 29, 154);
+  backface-visibility: 50%;
+}
+
+.header.sticky nav a:hover {
+  background-color: rgb(69, 29, 154, 1.00);
+  backface-visibility: 50%;
+}
+
+/* Background Image Section */
+.background-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url('/public/image/campNou.jpeg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-section h1 {
+  position: relative;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.background-section h1:hover {
+  transform: scale(1.6);
+  color: solid white;
+}
+
+/* Main Section */
+main,
+footer {
+  padding: 2rem;
+  background-color: rgba(25, 25, 25, 1);
+  color: rgb(240, 240, 240, 1);
+}
+
+.content {
+  max-width: 1200px;
+  color: rgb(240, 240, 240, 1);
+  margin: 0 auto;
+  line-height: 1.6;
+  bottom: 0;
+  text-align: center;
+}
+
+hr {
+  padding: 0;
+}
+
+.content h1 {
+  text-decoration: underline;
+  font-size: 50px;
+}
+
+
+.content h2 {
+  text-align: center;
+}
+
+.content h3 {
+  text-align: center;
+  text-transform: capitalize;
+  text-wrap: wrap;
+  margin-left: 14vw;
+  margin-right: 14vw;
+}
+
+.content p {
+  padding-top: 2rem;
+  font-size:medium;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.part-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  font-size: large;
+}
+
+.aboutme {
+  text-align: left;
+}
+
+.pp {
+  max-height: 400px;
+  max-height: auto;
+  padding-top: 2rem;
+}
+
+.education-images {
+  display: flex;
+  align-items:center;
+  justify-content:space-evenly;
+}
+
+.education p {
+  font-size: medium;
+}
+
+.education img {
+  display: flex;
+  max-width: 1000px;
+  max-height: auto;
+  justify-content: space-evenly;
+}
+
+
+
+
+
+@media (max-width: 939px) {
+  .education-images {
+    display:flex;
+    flex-direction: column;
+  }
+}
+/* Add styles for phone view */
+@media (max-width: 768px) { /* Targets devices with a width of 768px or less */
+  .part-content {
+    flex-direction: column; /* Stacks items vertically */
+    gap: 1rem; /* Reduces gap between elements */
+    font-size: medium; /* Adjust font size for smaller screens */
+    text-align: center; /* Center aligns text */
+  }
+
+  nav {
+    align-items: center; /* Center the links */
+    gap: 0.4rem; /* Reduce the gap between links */
+  }
+
+  nav a {
+    padding: 0.1rem 0.2rem; /* Reduce padding for smaller buttons */
+    font-size: 0.9rem; /* Adjust font size */
+    width: 90%; /* Make links more compact */
+    text-align: center; /* Align text to the center */
+  }
+  .logo h2 {
+    font-size: medium;
+  }
+
+  .pp {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 auto; /* Centers the image */
+  }
+
+  .background-section h1:hover {
+    transform: none;
+    color: solid white;
+  }
+
+  .education img {
+    flex-shrink: 1;
+    max-width: 300px;
+    max-height: auto;
+  }
+
+  .education-images {
+    display:block;
+  }
 }
