@@ -13,6 +13,10 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+a {
+  color: rgb(240, 240, 240, 1);
+}
+
 /* Header/Nav Bar */
 .header {
   background-color: rgba(0, 0, 128, 1.23);
@@ -176,17 +180,44 @@ hr {
   display: flex;
   max-width: 1000px;
   max-height: auto;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+
+.pong {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 1;
 }
 
 
+footer {
+  background-color: rgba(0, 0, 128, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer a {
+  color: rgb(240, 240, 240, 1);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 1rem;
+}
 
 
-
-@media (max-width: 939px) {
+@media (max-width: 1016px) {
   .education-images {
     display:flex;
     flex-direction: column;
+  }
+
+  .pong img {
+    flex-shrink: 1;
+    max-width: 350px;
+    max-height: auto;
   }
 }
 /* Add styles for phone view */
@@ -232,5 +263,16 @@ hr {
 
   .education-images {
     display:block;
+  }
+
+  .pong {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pong img {
+    flex-shrink: 1;
+    max-width: 300px;
+    max-height: auto;
   }
 }

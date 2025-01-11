@@ -120,7 +120,12 @@ function App() {
           <div className='work'>
             <h2>Discovery Lab Global</h2>
             <h2 style={{ fontStyle: 'italic'}}>Artificial Intelligence Development Intern</h2>
+            <div className='pong'>
+            <img className='pp' src='/image/SADE1.png' alt='pp'></img>
+            <img className='pp' src='/image/SADE2.png' alt='pp'></img>
+            </div>
             <p>bruh</p>
+            <a href='' alt='Document Link'>Technical Documentation</a>
           </div>
 
           <p>{/*Empty Space*/}</p>
@@ -140,6 +145,10 @@ function App() {
       {/* Footer Section */}
       <footer>
         <p>&copy; 2024 Robert Murray. All rights reserved.</p>
+        <div className='footerLinks'>
+        <a href='' alt='GitHub'>Github</a>
+        <a href='' alt='LinkedIn'>LinkedIn</a>
+        </div>
       </footer>
     </div>
   );
